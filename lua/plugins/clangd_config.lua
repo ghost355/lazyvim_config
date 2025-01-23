@@ -6,15 +6,12 @@ return {
         clangd = {
           cmd = {
             "clangd",
-            "--fallback-style=LLVM",
-          },
-          settings = {
-            -- Кастомные настройки форматирования
-            format = {
-              indentWidth = 4,
-              columnLimit = 100,
-              basedOnStyle = "LLVM",
-            },
+            "--background-index",
+            "--clang-tidy",
+            "--header-insertion=iwyu",
+            "--completion-style=detailed",
+            "--function-arg-placeholders",
+            "--fallback-style=llvm",
           },
         },
       },
