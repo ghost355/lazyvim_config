@@ -6,14 +6,14 @@ return {
         clangd = {
           cmd = {
             "clangd",
-            "--fallback-style=google",
+            "--fallback-style=LLVM",
           },
           settings = {
             -- Кастомные настройки форматирования
             format = {
               indentWidth = 4,
               columnLimit = 100,
-              basedOnStyle = "k&r",
+              basedOnStyle = "LLVM",
             },
           },
         },
