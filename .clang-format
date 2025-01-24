@@ -1,0 +1,158 @@
+# BasedOnStyle: Google
+AlignConsecutiveAssignments: true # bool -> Выровнять последовательные присваивания
+
+AccessModifierOffset: -1 # int -> Смещение модификаторов доступа
+AlignAfterOpenBracket: Align # enum: Align, DontAlign, Break -> Выровнять после открывающей скобки
+# AlignConsecutiveAssignments: false # bool -> Выровнять последовательные присваивания
+AlignConsecutiveDeclarations: false # bool -> Выровнять последовательные объявления
+AlignConsecutiveMacros: AcrossComments # -> Выровнять макросы
+AlignEscapedNewlines: Left # enum: DontAlign, Left, Right -> Выровнять экранированные переводы строк
+AlignOperands: true  # bool -> Выровнять операнды
+AlignTrailingComments: true # bool -> Выровнять завершающие комментарии
+#
+AllowAllArgumentsOnNextLine: true # bool -> Разрешать все аргументы на следующей строке
+AllowAllParametersOfDeclarationOnNextLine: true # bool -> Разрешать все параметры декларации на следующей строке
+AllowShortBlocksOnASingleLine: Empty # bool -> Разрешать короткие блоки на одной строке
+AllowShortCaseLabelsOnASingleLine: false # bool -> Разрешать короткие метки case на одной строке
+AllowShortFunctionsOnASingleLine: Empty # enum: All, InlineOnly, Empty, None -> Разрешать короткие функции на одной строке
+AllowShortIfStatementsOnASingleLine: Never # enum: Never, WithoutElse, OnlyFirstIf, AllIfsAndElse -> Разрешать короткие if-условия на одной строке
+AllowShortLoopsOnASingleLine: false # bool -> Разрешать короткие циклы на одной строке
+AllowShortEnumsOnASingleLine: true # -> Разрешить короткие перечисления на одной строке
+#
+AlwaysBreakBeforeMultilineStrings: false # bool -> Всегда разбивать перед многострочными строками
+# ArgumentDependency: "" # string -> Зависимость аргументов
+#
+# AttributeMacros: [__capability, __output, __unused] # list of strings -> Макросы атрибутов
+BinPackArguments: false # bool -> Паковать аргументы
+BinPackParameters: false # bool -> Паковать параметры
+BitFieldColonSpacing: None
+BraceWrapping: # record -> Обёртка фигурных скобок
+  AfterClass: false # bool -> После класса
+  AfterControlStatement: false # bool -> После управляющего выражения
+  AfterEnum: false # bool -> После перечисления
+  AfterFunction: false # bool -> После функции
+  AfterNamespace: false # bool -> После пространства имён
+  AfterObjCDeclaration: false # bool -> После объявления ObjC
+  AfterStruct: false # bool -> После структуры
+  AfterUnion: false # bool -> После объединения
+  AfterExternBlock: false # bool -> После внешнего блока
+  BeforeCatch: false # bool -> Перед catch
+  BeforeElse: false # bool -> Перед else
+  IndentBraces: false # bool -> Отступ для фигурных скобок
+  SplitEmptyFunction: false # bool -> Разделять пустую функцию
+  SplitEmptyRecord: true # bool -> Разделять пустую запись
+  SplitEmptyNamespace: true # bool -> Разделять пустое пространство имён
+
+BreakAfterReturnType: Automatic # enum: None, All, TopLevel, AllDefinitions, TopLevelDefinitions -> Всегда разбивать после типа возвращаемого значения
+BreakBeforeBinaryOperators: All # enum: None, NonAssignment, All -> Разбить перед бинарными операторами
+BreakBeforeBraces: Custom # enum: Attach, Linux, Mozilla, Stroustrup, Allman, GNU -> Разбить перед фигурными скобками
+BreakBeforeInheritanceComma: false # bool -> Разбить перед запятой наследования
+BreakInheritanceList: BeforeColon # enum: BeforeColon, AfterColon, BeforeComma, AfterComma -> Разбить список наследования
+BreakBeforeTernaryOperators: true # bool -> Разбить перед тернарными операторами
+BreakConstructorInitializersBeforeComma: false # bool -> Разбить инициализаторы конструктора перед запятой
+BreakConstructorInitializers: BeforeColon # enum: BeforeColon, AfterColon -> Разбить инициализаторы конструктора
+BreakAfterJavaFieldAnnotations: false # bool -> Разбить после аннотаций полей Java
+BreakStringLiterals: true # bool -> Разбить строковые литералы
+BreakTemplateDeclarations: Yes # enum: No, MultiLine, Yes -> Всегда разбивать объявления шаблонов
+
+ColumnLimit: 100 # unsigned int -> Ограничение колонок
+CommentPragmas: "^ IWYU pragma:" # list of strings -> Прагмы комментариев
+CompactNamespaces: false # bool -> Компактные пространства имён
+ConstructorInitializerAllOnOneLineOrOnePerLine: true # bool -> Все инициализаторы конструктора на одной строке или каждый на новой
+ConstructorInitializerIndentWidth: 4 # unsigned int -> Ширина отступа инициализатора конструктора
+ContinuationIndentWidth: 2 # unsigned int -> Ширина отступа продолжения
+Cpp11BracedListStyle: true # bool -> Стиль списка в фигурных скобках C++11
+DerivePointerAlignment: true # bool -> Производить выравнивание указателей
+DisableFormat: false # bool -> Отключить форматирование
+ExperimentalAutoDetectBinPacking: true # bool -> Экспериментальное автоматическое обнаружение упаковки
+FixNamespaceComments: true # bool -> Исправить комментарии в пространстве имён
+ForEachMacros: ["foreach", "Q_FOREACH", "BOOST_FOREACH"] # list of strings -> Макросы цикла foreach
+IncludeBlocks: Merge # enum: Preserve, Merge, Regroup -> Блоки включения
+
+IncludeCategories:
+  - Regex:           '^"(llvm|llvm-c|clang|clang-c)/'
+    Priority:        2
+    SortPriority:    2
+    CaseSensitive:   true
+  - Regex:           '^((<|")(gtest|gmock|isl|json)/)'
+    Priority:        3
+  - Regex:           '<[[:alnum:].]+>'
+    Priority:        4
+  - Regex:           '.*'
+    Priority:        1
+    SortPriority:    0
+#
+IncludeIsMainRegex: "([-_](test|unittest))?$" # string -> Основной регулярный выражении для включения
+IndentCaseLabels: true # bool -> Отступ меток case
+IndentPPDirectives: None # enum: None, AfterHash -> Отступ директив препроцессора
+IndentWidth: 2 # unsigned int -> Ширина отступа
+IndentWrappedFunctionNames: false # bool -> Отступ обёрнутых имён функций
+JavaScriptQuotes: Leave # enum: Leave, Single, Double -> Кавычки в JavaScript
+JavaScriptWrapImports: true # bool -> Обертка импортов в JavaScript
+InsertBraces: true
+InsertNewlineAtEOF: true
+KeepEmptyLines:
+  AtEndOfFile: false
+  AtStartOfBlock: false
+  AtStartOfFile: false
+# MacroBlockBegin: "" # string -> Начало блока макросов
+# MacroBlockEnd: "" # string -> Конец блока макросов
+MaxEmptyLinesToKeep: 1 # unsigned int -> Максимально допустимое количество пустых строк
+NamespaceIndentation: None # enum: None, Inner, All -> Отступ пространства имён
+
+ObjCBinPackProtocolList: Never # enum: Auto, Always, Never -> Упаковка протокола ObjC
+ObjCBlockIndentWidth: 2 # unsigned int -> Ширина отступа блока ObjC
+ObjCSpaceAfterProperty: false # bool -> Пробел после свойства ObjC
+ObjCSpaceBeforeProtocolList: true # bool -> Пробел перед списком протоколов ObjC
+
+PenaltyBreakAssignment: 2 # unsigned int -> Штраф за разрыв присваивания
+PenaltyBreakBeforeFirstCallParameter: 19 # unsigned int -> Штраф за разрыв перед первым параметром вызова
+PenaltyBreakComment: 300 # unsigned int -> Штраф за разрыв комментария
+PenaltyBreakFirstLessLess: 120 # unsigned int -> Штраф за первый разрыв <<
+PenaltyBreakString: 1000 # unsigned int -> Штраф за разрыв строки
+PenaltyBreakTemplateDeclaration: 10 # unsigned int -> Штраф за разрыв объявления шаблона
+PenaltyExcessCharacter: 1000000 # unsigned int -> Штраф за лишний символ
+PenaltyReturnTypeOnItsOwnLine: 60 # unsigned int -> Штраф за возврат типа на своей строке
+#
+PointerAlignment: Right # enum: Left, Right, Middle -> Выравнивание указателя
+ReferenceAlignment: Right
+#
+RawStringFormats: # list of records -> Форматы сырой строки
+  - Language: Cpp # string -> Язык
+    Delimiters: ["cc", "CC", "cpp", "Cpp", "CPP", "c++", "C++"] # list of strings -> Делимитеры
+    CanonicalDelimiter: "" # string -> Канонический делимитер
+    BasedOnStyle: Google # string -> Основан на стиле
+  - Language: TextProto # string -> Язык
+    Delimiters: ["pb", "PB", "proto", "PROTO"] # list of strings -> Делимитеры
+    EnclosingFunctions: ["EqualsProto", "EquivToProto", "PARSE_PARTIAL_TEXT_PROTO", "PARSE_TEST_PROTO", "PARSE_TEXT_PROTO", "ParseTextOrDie", "ParseTextProtoOrDie"] # list of strings -> Функции-оболочки
+    CanonicalDelimiter: "" # string -> Канонический делимитер
+    BasedOnStyle: Google # string -> Основан на стиле
+
+ReflowComments: true # bool -> Реформатировать комментарии
+
+SortIncludes: true # bool -> Сортировать включения
+SortUsingDeclarations: true # bool -> Сортировать объявления using
+SeparateDefinitionBlocks: Always
+#
+SpaceAfterCStyleCast: false # bool -> Пробел после каста в стиле C
+SpaceAfterLogicalNot: false # bool -> Пробел после логического NOT
+SpaceAfterTemplateKeyword: true # bool -> Пробел после ключевого слова template
+SpaceBeforeAssignmentOperators: true # bool -> Пробел перед операторами присваивания
+SpaceBeforeCpp11BracedList: false # bool -> Пробел перед списком в фигурных скобках C++11
+SpaceBeforeCtorInitializerColon: true # bool -> Пробел перед двоеточием инициализатора конструктора
+SpaceBeforeInheritanceColon: true # bool -> Пробел перед двоеточием наследования
+SpaceBeforeParens: ControlStatements # enum: ControlStatements, Never, Always -> Пробел перед круглыми скобками
+SpaceBeforeRangeBasedForLoopColon: true # bool -> Пробел перед двоеточием в цикле for на основе диапазона
+SpaceInEmptyParentheses: false # bool -> Пробел в пустых круглых скобках
+SpacesBeforeTrailingComments: 1 # unsigned int -> Пробелы перед завершающим комментарием
+SpacesInAngles: false # bool -> Пробелы в угловых скобках
+SpacesInContainerLiterals: true # bool -> Пробелы в литералах контейнера
+SpacesInCStyleCastParentheses: false # bool -> Пробелы в круглых скобках каста в стиле C
+SpacesInParentheses: false # bool -> Пробелы в круглых скобках
+SpacesInSquareBrackets: false # bool -> Пробелы в квадратных скобках
+#
+Standard: Latest # enum: Cpp03, GNU, Cpp11, Latest -> Стандарт
+TabWidth: 8 # unsigned int -> Ширина табуляции
+UseCRLF: false # bool -> Использовать CRLF
+UseTab: Never # enum: Never, ForIndentation, Always -> Использовать табуляцию
+#
