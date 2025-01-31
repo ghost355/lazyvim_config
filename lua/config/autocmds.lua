@@ -19,3 +19,10 @@ au({ "BufRead", "BufNewFile" }, {
     vim.opt.spell = true
   end,
 })
+
+au({ "FileType" }, {
+  pattern = { "gd", "gdscript" },
+  callback = function()
+    vim.bo.filetype = "gdscript" -- Устанавливаем тип файла
+  end,
+})
