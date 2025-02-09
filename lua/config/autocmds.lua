@@ -24,9 +24,9 @@ au({ "FileType" }, {
   pattern = { "gd", "gdscript" },
   callback = function()
     vim.bo.filetype = "gdscript" -- Устанавливаем тип файла
-    vim.bo.tabstop = 2 -- Размер таба (в пробелах)
-    vim.bo.shiftwidth = 2 -- Размер отступов для команд >> и <<
-    vim.bo.softtabstop = 2 -- Размер "мягкого" таба (в пробелах)
-    vim.bo.expandtab = false -- Использовать символы таба вместо пробелов
+    vim.bo.tabstop = 4 -- Размер таба (в пробелах)
+    vim.bo.shiftwidth = 4 -- Размер отступов для команд >> и <<
+    vim.bo.softtabstop = 4 -- Размер "мягкого" таба (в пробелах)
+    vim.bo.expandtab = true -- Использовать символы таба вместо пробелов
   end,
 })
