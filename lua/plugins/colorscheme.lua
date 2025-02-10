@@ -1,7 +1,8 @@
 return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
-
+  { "sainnhe/gruvbox-material" },
+  { "maxmx03/solarized.nvim" },
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
