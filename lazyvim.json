@@ -14,10 +14,10 @@
     "lazyvim.plugins.extras.lang.cmake",
     "lazyvim.plugins.extras.lang.git",
     "lazyvim.plugins.extras.lang.markdown",
-    "lazyvim.plugins.extras.lang.omnisharp",
     "lazyvim.plugins.extras.util.dot",
     "lazyvim.plugins.extras.util.gitui",
-    "lazyvim.plugins.extras.util.project"
+    "lazyvim.plugins.extras.util.project",
+    "lazyvim.plugins.extras.vscode"
   ],
   "install_version": 7,
   "news": {
