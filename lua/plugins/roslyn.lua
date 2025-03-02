@@ -101,11 +101,20 @@ return {
           },
           ["csharp|background_analysis"] = {
             background_analysis_dotnet_compiler_diagnostics_scope = "fullSolution",
+            background_analysis_dotnet_analyzers_diagnostics_scope = "fullSolution",
           },
           ["csharp|symbol_search"] = {
             dotnet_search_reference_assemblies = true,
           },
         },
+      },
+    },
+  },
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        cs = { "sharpier" },
       },
     },
   },
